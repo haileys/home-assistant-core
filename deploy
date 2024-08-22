@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+
+(cd homeassistant/components && git archive HEAD smartthings tuya) |
+    ssh root@hass.lan.hails.org tar -C homeassistant/custom_components -xvf -
